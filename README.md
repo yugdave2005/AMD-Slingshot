@@ -11,7 +11,7 @@ Visualize your emotional patterns, explore connections, and chat with an empathe
 
 This full-stack React app combines intuitive UI/UX with AI-driven personalization to foster **self-awareness and emotional growth**.
 
-### 📺 [Watch the Demo Video](https://youtu.be/CLAenmJ0HaA?si=VBW5qctcXqG7y8-L)
+### 📺 [Watch the Demo Video](https://youtu.be/AFGDQ3eYbfs)
 
 ---
 
@@ -50,8 +50,8 @@ This full-stack React app combines intuitive UI/UX with AI-driven personalizatio
 
 ```bash
 # Clone the repo
-git clone https://github.com/ParthZadeshwariya/TechSprint-WellWeave.git
-cd TechSprint-WellWeave
+git clone https://github.com/yugdave2005/Lakecity-Hackathon-Well-Weave.git
+cd Lakecity-Hackathon-Well-Weave
 
 # Install dependencies
 npm install
