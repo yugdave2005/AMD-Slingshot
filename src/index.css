@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base colors - Creamy/Soft White Backgrounds */
+    --background: 210 20% 98%;
+    --foreground: 222 15% 15%;
+    /* Dark, readable text */
+
+    /* Primary - Soft Calming Blue */
+    --primary: 200 60% 55%;
+    --primary-foreground: 0 0% 100%;
+    /* White text on primary */
+
+    /* Secondary - Gentle Lavender/Mint */
+    --secondary: 260 40% 92%;
+    --secondary-foreground: 260 20% 20%;
+
+    /* Accent - Soft Peach/Coral */
+    --accent: 15 70% 94%;
+    --accent-foreground: 15 30% 25%;
+
+    /* Muted */
+    --muted: 210 20% 90%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Card Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 222 15% 15%;
+
+    /* Borders & Inputs */
+    --border: 210 20% 85%;
+    /* Slightly darker for better visibility */
+    --input: 210 20% 90%;
+    --ring: 200 60% 55%;
+
+    /* Status Colors */
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Radius */
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(210 20% 98%) 0%, hsl(200 30% 95%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(200 60% 55%) 0%, hsl(260 50% 65%) 100%);
+  }
+
+  .dark {
+    /* Deep Obsidian Blue Background */
+    --background: 230 35% 7%;
+    --foreground: 210 40% 98%;
+
+    /* Soft Twilight Card Surface */
+    --card: 230 25% 11%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 230 25% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Neural Violet Primary */
+    --primary: 250 60% 65%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Deep Slate Secondary */
+    --secondary: 210 30% 20%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Deep Muted */
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Cyan Glow Accent */
+    --accent: 180 50% 50%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Subtle Borders */
+    --border: 230 20% 20%;
+    --input: 230 20% 20%;
+    --ring: 250 60% 65%;
+
+    /* Aurora Gradient */
+    --gradient-hero: radial-gradient(circle at 50% 0%, hsl(250 40% 15%) 0%, hsl(230 35% 7%) 60%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    background: var(--gradient-hero);
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/80 backdrop-blur-md border border-white/40 shadow-sm text-foreground;
+  }
+
+  /* Restoring card-neural as a clean, high-contrast card for the new theme */
+  .card-neural {
+    @apply bg-card border border-border/50 shadow-sm text-card-foreground;
+  }
+
+  .text-gradient {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
